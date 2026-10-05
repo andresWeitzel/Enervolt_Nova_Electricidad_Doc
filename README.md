@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./doc/assets/enervolt-background.es.jpg" alt="Enervolt Nova Electricidad" width="100%" />
+<img src="./doc/assets/enervolt-background.es.png" alt="Enervolt Nova Electricidad" width="100%" />
 <div align="right">
 <img width="16" height="16" src="./doc/assets/icons/frontend/svg/react.svg" alt="React" />
 <img width="16" height="16" src="./doc/assets/icons/frontend/svg/typescript.svg" alt="TypeScript" />
@@ -32,15 +32,7 @@
 
 </div>
 
-Enervolt Nova Electricidad reúne servicios, trabajos realizados y el pedido de presupuesto en un sitio propio, para hogares, oficinas, locales y consorcios en CABA y zonas cercanas. Cada trabajo se reconoce por su zona, su tipo y sus fotos, y la consulta sigue por WhatsApp o correo cuando vos lo decidís.
-
-<div align="center">
-<img src="./doc/assets/pruebas/01-inicio.png" alt="Portada del sitio publicado" width="360" />
-<br>
-<sub>Portada · enervoltnova.com/electricidad</sub>
-</div>
-
-<br>
+Enervolt Nova Electricidad es el sitio de un servicio eléctrico para hogares, oficinas, locales y consorcios en CABA y zonas cercanas, con atención las 24 horas. El visitante encuentra servicios concretos, trabajos reales con foto y barrio, y un mapa para recorrer las intervenciones por zona. Si llega con una duda, Enervolti —el chat con inteligencia artificial del sitio— la responde al momento: servicios, cobertura, horarios, visitas y cómo pedir un presupuesto. Cuando quiere avanzar, indica la ubicación, cuenta el problema y puede sumar fotos o un video breve. El pedido queda listo para seguirlo por WhatsApp o por correo.
 
 <div align="left">
 <a href="https://enervoltnova.com/electricidad/" target="_blank" rel="noopener noreferrer" title="Ver live"><img src="./doc/assets/icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
@@ -109,7 +101,9 @@ Qué entrega el sitio:
 * **Inicio**, con servicios, trabajos destacados y el camino para pedir un presupuesto.
 * **Nueve servicios:** térmicas y disyuntores, tableros, tomacorrientes, iluminación, cableado, instalaciones nuevas, detección de fallas, porteros y electricidad para locales.
 * **Catálogo de trabajos** con foto, zona y detalle, más un mapa para explorarlos por barrio.
+* **Enervolti**, el chat del sitio. Orienta sobre servicios, zonas, horarios, visitas y presupuesto, y abre la página que corresponde. Las respuestas salen de la información publicada; no inventa precios ni diagnósticos.
 * **Presupuesto** con ubicación del catálogo (48 barrios de CABA y localidades de Buenos Aires), validación compartida entre la web y el servidor, y envío por WhatsApp o correo.
+* **Búsqueda** de servicios y trabajos, y apariencia clara u oscura.
 * **Cómo trabajamos** y **Contacto**, con atención las 24 horas, incluidos fines de semana.
 * **Páginas legales** estáticas: privacidad y condiciones, legibles sin JavaScript.
 * **HTML de producción** con título, descripción y datos estructurados por página, más `sitemap.xml`.
@@ -176,8 +170,8 @@ Documentación (este repositorio):
 Enervolt_Nova_Electricidad_Doc/
 ├── doc/
 │   └── assets/
-│       ├── enervolt-background.es.jpg   # Cabecera del README en español
-│       ├── enervolt-background.en.jpg   # Cabecera del README en inglés
+│       ├── enervolt-background.es.png   # Cabecera del README en español
+│       ├── enervolt-background.en.png   # Cabecera del README en inglés
 │       ├── icons/                       # Badges, píldoras e iconos de tecnologías
 │       ├── pruebas/                     # Capturas del sitio publicado
 │       └── translation/
@@ -389,7 +383,7 @@ Páginas legales:
 
 #### 3.0.1) Recorrido del sitio publicado
 
-Capturas de [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). La portada del inicio está arriba, junto al enlace **Ver live**. Acá sigue el resto del recorrido: navegación, cómo trabajamos, trabajos, mapa, Enervolti y el formulario de presupuesto.
+Capturas de [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). La cabecera de este README es el inicio en escritorio. Acá sigue el resto del recorrido: navegación, cómo trabajamos, trabajos, mapa, Enervolti y el formulario de presupuesto.
 
 <div align="center">
 

@@ -1,5 +1,5 @@
 <div align="center">
-<img src="../enervolt-background.en.jpg" alt="Enervolt Nova Electricidad" width="100%" />
+<img src="../enervolt-background.en.png" alt="Enervolt Nova Electricidad" width="100%" />
 <div align="right">
 <img width="16" height="16" src="../icons/frontend/svg/react.svg" alt="React" />
 <img width="16" height="16" src="../icons/frontend/svg/typescript.svg" alt="TypeScript" />
@@ -32,15 +32,7 @@
 
 </div>
 
-Enervolt Nova Electricidad brings services, completed jobs, and quote requests together on its own site, for homes, offices, shops, and apartment buildings in Buenos Aires City and nearby areas. Each job is recognized by its area, its type, and its photos, and the inquiry continues on WhatsApp or email when you decide.
-
-<div align="center">
-<img src="../pruebas/01-inicio.png" alt="Cover of the published site" width="360" />
-<br>
-<sub>Cover · enervoltnova.com/electricidad</sub>
-</div>
-
-<br>
+Enervolt Nova Electricidad is the site of an electrical service for homes, offices, shops, and apartment buildings in Buenos Aires City and nearby areas, open 24 hours. Visitors find concrete services, real jobs with a photo and a neighborhood, and a map to browse the work by area. When someone arrives with a question, Enervolti —the site's AI chat— answers it right away: services, coverage, hours, visits, and how to request a quote. When they are ready to move ahead, they add a location, describe the problem, and can attach photos or a short video. The request is ready to continue on WhatsApp or email.
 
 <div align="left">
 <a href="https://enervoltnova.com/electricidad/" target="_blank" rel="noopener noreferrer" title="View live"><img src="../icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
@@ -109,7 +101,9 @@ What the site delivers:
 * **Home**, with services, featured jobs, and the path to request a quote.
 * **Nine services:** circuit breakers and RCDs, panels, outlets, lighting, wiring, new installations, fault finding, doorbells, and shop electrical work.
 * **Job catalog** with photo, area, and detail, plus a map to explore them by neighborhood.
+* **Enervolti**, the site chat. It guides people through services, areas, hours, visits, and quotes, and opens the matching page. Answers come from the published information; it does not invent prices or diagnoses.
 * **Quote form** with a location from the catalog (48 Buenos Aires City neighborhoods and Buenos Aires Province localities), validation shared by the web app and the server, and delivery through WhatsApp or email.
+* **Search** across services and jobs, plus a light or dark appearance.
 * **How we work** and **Contact**, with service 24 hours a day, including weekends.
 * **Static legal pages:** privacy and terms, readable without JavaScript.
 * **Production HTML** with a title, description, and structured data per page, plus `sitemap.xml`.
@@ -176,8 +170,8 @@ Documentation (this repository):
 Enervolt_Nova_Electricidad_Doc/
 ├── doc/
 │   └── assets/
-│       ├── enervolt-background.es.jpg   # Spanish README header
-│       ├── enervolt-background.en.jpg   # English README header
+│       ├── enervolt-background.es.png   # Spanish README header
+│       ├── enervolt-background.en.png   # English README header
 │       ├── icons/                       # Badges, pills, and technology icons
 │       ├── pruebas/                     # Screenshots of the published site
 │       └── translation/
@@ -389,7 +383,7 @@ Legal pages:
 
 #### 3.0.1) Walkthrough of the published site
 
-Screenshots of [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). The home cover is above, next to **Ver live**. The rest of the walkthrough is here: navigation, how we work, jobs, the map, Enervolti, and the quote form.
+Screenshots of [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). The header of this README is the desktop home. The rest of the walkthrough is here: navigation, how we work, jobs, the map, Enervolti, and the quote form.
 
 <div align="center">
 
