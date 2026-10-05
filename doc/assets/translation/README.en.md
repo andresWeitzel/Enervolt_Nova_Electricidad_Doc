@@ -18,7 +18,7 @@
 <br>
 
 <div align="right">
-  <a href="../../README.md" title="Español">
+  <a href="../../../README.md" title="Español">
     <img src="./arg-flag.jpg" width="64" height="40" alt="Español" title="Español" />
   </a>
   <a href="./README.en.md" title="English">
@@ -428,7 +428,7 @@ When the 404 or the routing changes, publish in this order: the Worker first (`n
 4. Push (`git push origin feature/my-change`).
 5. Open a pull request.
 
-Do not commit `.env.local` or credentials. If a variable changes, document it in `.env.example` and in both READMEs: this one and the [Spanish README](../../README.md).
+Do not commit `.env.local` or credentials. If a variable changes, document it in `.env.example` and in both READMEs: this one and the [Spanish README](../../../README.md).
 
 </details>
 
@@ -444,7 +444,7 @@ Developed by Andrés Weitzel.
 **Links:**
 
 * **Published application:** [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/)
-* **Spanish README:** [README.md](../../README.md)
+* **Spanish README:** [README.md](../../../README.md)
 * **Business profile:** [Enervolt Nova Electricidad on Google](https://www.google.com/maps/place/Enervolt+Nova+Electricidad/data=!4m2!3m1!1s0x0:0xcb27b0a80c78e048)
 
 </details>
