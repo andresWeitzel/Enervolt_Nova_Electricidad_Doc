@@ -32,7 +32,7 @@
 
 </div>
 
-Enervolt Nova Electricidad es el sitio de un servicio eléctrico para hogares, oficinas, locales y consorcios en CABA y zonas cercanas, con atención las 24 horas. El visitante encuentra servicios concretos, trabajos reales con foto y barrio, y un mapa para recorrer las intervenciones por zona. Si llega con una duda, Enervolti —el chat con inteligencia artificial del sitio— la responde al momento: servicios, cobertura, horarios, visitas y cómo pedir un presupuesto. Cuando quiere avanzar, indica la ubicación, cuenta el problema y puede sumar fotos o un video breve. El pedido queda listo para seguirlo por WhatsApp o por correo.
+Enervolt Nova Electricidad es la aplicación de un servicio eléctrico para hogares, oficinas, locales y consorcios en CABA y zonas cercanas, con atención las 24 horas. Quien entra encuentra servicios concretos, trabajos reales con foto y barrio, y un mapa para recorrer las intervenciones por zona. Si llega con una duda, Enervolti —el chat con inteligencia artificial de la aplicación— la responde al momento: servicios, cobertura, horarios, visitas y cómo pedir un presupuesto. Cuando quiere avanzar, indica la ubicación, cuenta el problema y puede sumar fotos o un video breve. El pedido queda listo para seguirlo por WhatsApp o por correo.
 
 <div align="left">
 <a href="https://enervoltnova.com/electricidad/" target="_blank" rel="noopener noreferrer" title="Ver live"><img src="./doc/assets/icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
@@ -60,7 +60,7 @@ Enervolt Nova Electricidad es el sitio de un servicio eléctrico para hogares, o
 * [1.2) Estructura.](#12-estructura-)
 * [1.3) Tecnologías.](#13-tecnologías-)
 
-### Sección 2) El sitio y el recorrido
+### Sección 2) La aplicación y el recorrido
 
 * [2.0) Páginas.](#20-páginas-)
 * [2.1) Servicios.](#21-servicios-)
@@ -71,7 +71,7 @@ Enervolt Nova Electricidad es el sitio de un servicio eléctrico para hogares, o
 ### Sección 3) Publicación, pruebas y referencias
 
 * [3.0) Pruebas.](#30-pruebas-)
-* [3.1) Sitio publicado (Vercel).](#31-sitio-publicado-vercel-)
+* [3.1) Aplicación publicada (Vercel).](#31-aplicación-publicada-vercel-)
 * [3.2) Contribuir.](#32-contribuir-)
 * [3.3) Referencias.](#33-referencias-)
 
@@ -88,20 +88,21 @@ Enervolt Nova Electricidad es el sitio de un servicio eléctrico para hogares, o
 
 <br>
 
-Este repositorio guarda la **documentación** del sitio. La aplicación vive en [Voltix_Electricidad_AW](https://github.com/andresWeitzel/Voltix_Electricidad_AW): React, Vite y TypeScript, con funciones en Vercel para los pedidos y un Worker de Cloudflare que publica todo bajo `/electricidad`.
+**Enervolt Nova Electricidad** es una aplicación en React, Vite y TypeScript. Las funciones de Vercel guardan los pedidos y un Worker de Cloudflare la publica en [https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/).
 
 Para qué existe:
 
-* Mostrar el oficio con servicios, fotos y la zona de cada trabajo, en un sitio que se puede recorrer sin cuenta.
+* Mostrar el oficio con servicios, fotos y la zona de cada trabajo, sin pedir una cuenta.
+* Responder en el chat con Enervolti antes de completar el formulario.
 * Recibir una consulta con barrio o localidad del catálogo, una descripción y, si hace falta, fotos o un video breve.
-* Dejar el pedido guardado y abrir WhatsApp o el correo con el mensaje ya armado. La página pública es [https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/).
+* Dejar el pedido guardado y abrir WhatsApp o el correo con el mensaje ya armado.
 
-Qué entrega el sitio:
+Qué entrega la aplicación:
 
 * **Inicio**, con servicios, trabajos destacados y el camino para pedir un presupuesto.
 * **Nueve servicios:** térmicas y disyuntores, tableros, tomacorrientes, iluminación, cableado, instalaciones nuevas, detección de fallas, porteros y electricidad para locales.
 * **Catálogo de trabajos** con foto, zona y detalle, más un mapa para explorarlos por barrio.
-* **Enervolti**, el chat del sitio. Orienta sobre servicios, zonas, horarios, visitas y presupuesto, y abre la página que corresponde. Las respuestas salen de la información publicada; no inventa precios ni diagnósticos.
+* **Enervolti**, el chat de la aplicación. Orienta sobre servicios, zonas, horarios, visitas y presupuesto, y abre la página que corresponde. Las respuestas salen de la información publicada; no inventa precios ni diagnósticos.
 * **Presupuesto** con ubicación del catálogo (48 barrios de CABA y localidades de Buenos Aires), validación compartida entre la web y el servidor, y envío por WhatsApp o correo.
 * **Búsqueda** de servicios y trabajos, y apariencia clara u oscura.
 * **Cómo trabajamos** y **Contacto**, con atención las 24 horas, incluidos fines de semana.
@@ -119,15 +120,6 @@ El contacto público (WhatsApp, teléfono y correo) está definido en `shared/co
 
 <br>
 
-La aplicación se corre desde el repositorio de código, no desde esta documentación.
-
-* Clonar y entrar:
-
-```bash
-git clone https://github.com/andresWeitzel/Voltix_Electricidad_AW.git
-cd Voltix_Electricidad_AW
-```
-
 * Instalar, preparar el entorno local y arrancar:
 
 ```bash
@@ -136,7 +128,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-El sitio queda en el puerto que indica Vite. Usamos **`.env.local` como único archivo local de configuración**. Está excluido de Git. `.env.example` es la plantilla versionada, sin credenciales. Los teléfonos y el correo se cambian en `shared/contacto.js`, no en el entorno.
+La aplicación queda en el puerto que indica Vite. Usamos **`.env.local` como único archivo local de configuración**. Está excluido de Git. `.env.example` es la plantilla versionada, sin credenciales. Los teléfonos y el correo se cambian en `shared/contacto.js`, no en el entorno.
 
 En CI se usa **Node.js 22**.
 
@@ -153,7 +145,7 @@ En CI se usa **Node.js 22**.
 | `npm run storage:check` | Prueba real de escritura y lectura en el almacenamiento configurado |
 | `npm run drive:connect` | Conecta, en local, la cuenta propietaria de Google Drive |
 
-El detalle de Drive, Vercel y el cron de limpieza está en el README de la aplicación. No subas `.env.local`.
+No subas `.env.local`. Drive, Vercel y el cron de limpieza usan las variables de ese archivo y las del proyecto en Vercel.
 
 </details>
 
@@ -164,53 +156,22 @@ El detalle de Drive, Vercel y el cron de limpieza está en el README de la aplic
 
 <br>
 
-Documentación (este repositorio):
-
 ```text
-Enervolt_Nova_Electricidad_Doc/
-├── doc/
-│   └── assets/
-│       ├── enervolt-background.es.png   # Cabecera del README en español
-│       ├── enervolt-background.en.png   # Cabecera del README en inglés
-│       ├── icons/                       # Badges, píldoras e iconos de tecnologías
-│       ├── pruebas/                     # Capturas del sitio publicado
-│       └── translation/
-│           ├── arg-flag.jpg             # Bandera: español
-│           ├── eeuu-flag.jpg            # Bandera: inglés
-│           └── README.en.md             # Documentación en inglés
-└── README.md                            # Documentación en español
-```
-
-Aplicación:
-
-```text
-Voltix_Electricidad_AW/
-├── api/                                 # Funciones HTTP de Vercel
-│   ├── pedido.js                        # Guarda la solicitud
-│   ├── pedido-archivo.js                # Sube cada adjunto
-│   ├── solicitud.js                     # Consulta pública del pedido
-│   ├── archivo.js
-│   ├── estado.js                        # Diagnóstico de configuración
-│   └── limpieza-pedidos.js              # Barrido diario
+enervolt-nova-electricidad/
+├── api/                                 # Pedido, adjuntos, consulta, estado y limpieza
 ├── cloudflare/
 │   └── electricidad-router.js           # Prefijo /electricidad y 404 de la raíz
-├── public/
-│   ├── brand/                           # Logo y portada social
-│   ├── privacidad.html
-│   └── condiciones.html
-├── server/                              # Drive, validación de almacenamiento, limpieza
-├── shared/                              # Contacto, zonas, retención, archivos, validación
+├── public/                              # Marca, privacidad y condiciones
+├── server/                              # Google Drive, almacenamiento y limpieza
+├── shared/                              # Contacto, zonas, retención y validación
 ├── src/
 │   ├── components/
-│   ├── data/                            # Servicios, trabajos, SEO, textos del sitio
-│   ├── hooks/
-│   ├── lib/
-│   ├── modules/asistente/
+│   ├── data/                            # Servicios, trabajos, SEO y textos
+│   ├── modules/asistente/               # Enervolti
 │   ├── pages/                           # Inicio, servicios, trabajos, mapa, presupuesto
 │   └── App.tsx                          # Rutas de React Router
 ├── tests/
 ├── vercel.json                          # Rewrites, redirecciones y cron
-├── vite.config.ts
 └── package.json
 ```
 
@@ -226,7 +187,7 @@ Voltix_Electricidad_AW/
 | **Tecnología** | **Versión** | **Propósito** |
 | --- | --- | --- |
 | [React](https://react.dev/) | **19.2** | **Interfaz** |
-| [React Router](https://reactrouter.com/) | **7.18** | **Rutas del sitio** |
+| [React Router](https://reactrouter.com/) | **7.18** | **Rutas de la aplicación** |
 | [TypeScript](https://www.typescriptlang.org/) | **6.0** | **Tipos de la aplicación** |
 | [Vite](https://vite.dev/) | **8.3** | **Desarrollo y build** |
 | [Node.js](https://nodejs.org/) | **22** | **Tests, scripts y funciones** |
@@ -250,7 +211,7 @@ Voltix_Electricidad_AW/
 
 <br>
 
-## Sección 2) El sitio y el recorrido
+## Sección 2) La aplicación y el recorrido
 
 ### 2.0) Páginas [🔝](#índice-)
 
@@ -272,7 +233,7 @@ En local las rutas salen de la raíz. En el dominio público llevan el prefijo `
 | Presupuesto | `/presupuesto` | https://enervoltnova.com/electricidad/presupuesto |
 | Cómo trabajamos | `/como-trabajamos` | https://enervoltnova.com/electricidad/como-trabajamos |
 | Contacto | `/contacto` | https://enervoltnova.com/electricidad/contacto |
-| Búsqueda | `/buscar` | uso interno del sitio |
+| Búsqueda | `/buscar` | búsqueda dentro de la aplicación |
 
 `/proceso` redirige a `/como-trabajamos`. `/home` vuelve al inicio. Una ruta inexistente dentro de Electricidad muestra la página propia de no encontrado. Fuera de `/electricidad`, en `enervoltnova.com`, el Worker responde 404 sin consultar el origen.
 
@@ -336,7 +297,7 @@ Dos caminos de salida, después de guardar:
 
 La página no envía el mensaje por su cuenta. El usuario lo confirma en WhatsApp o en su correo.
 
-Contacto público del sitio:
+Contacto público:
 
 | Dato | Uso |
 | --- | --- |
@@ -357,7 +318,7 @@ Contacto público del sitio:
 
 <br>
 
-`POST /api/pedido-archivo` sube cada archivo y `POST /api/pedido` guarda la solicitud. **Google Drive es el almacenamiento remoto.** El sitio sigue navegable si esas funciones fallan; el formulario conserva lo cargado y permite reintentar o enviar solo el texto.
+`POST /api/pedido-archivo` sube cada archivo y `POST /api/pedido` guarda la solicitud. **Google Drive es el almacenamiento remoto.** La aplicación sigue usable si esas funciones fallan; el formulario conserva lo cargado y permite reintentar o enviar solo el texto.
 
 Los originales y el JSON del pedido vencen a los **quince días** desde la carga. El enlace público (`/p/<solicitud>`) avisa la fecha límite. Una consulta vencida puede responder `410` mientras el archivo existe, y `404` después del barrido. El cron diario está declarado en `vercel.json` (`GET /api/limpieza-pedidos`, 09:00 UTC).
 
@@ -381,7 +342,7 @@ Páginas legales:
 
 <br>
 
-#### 3.0.1) Recorrido del sitio publicado
+#### 3.0.1) Recorrido publicado
 
 Capturas de [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). La cabecera de este README es el inicio en escritorio. Acá sigue el resto del recorrido: navegación, cómo trabajamos, trabajos, mapa, Enervolti y el formulario de presupuesto.
 
@@ -389,7 +350,7 @@ Capturas de [enervoltnova.com/electricidad](https://enervoltnova.com/electricida
 
 | Navegación | Cómo trabajamos |
 | --- | --- |
-| <img src="./doc/assets/pruebas/02-navegacion.png" alt="Menú del sitio" width="260" /> | <img src="./doc/assets/pruebas/03-como-trabajamos.png" alt="Cómo trabajamos" width="260" /> |
+| <img src="./doc/assets/pruebas/02-navegacion.png" alt="Menú de la aplicación" width="260" /> | <img src="./doc/assets/pruebas/03-como-trabajamos.png" alt="Cómo trabajamos" width="260" /> |
 
 | Trabajos | Filtros |
 | --- | --- |
@@ -413,34 +374,40 @@ Capturas de [enervoltnova.com/electricidad](https://enervoltnova.com/electricida
 
 #### 3.0.2) Tests automatizados
 
-En el repositorio de la aplicación:
-
 ```bash
 npm test
 npm run lint
 npm run build
 ```
 
-`npm test` usa `node --test` sobre `tests/*.test.mjs`: navegación, mapa, pedidos, almacenamiento simulado, permisos de Drive, el Worker de Cloudflare y el contrato de validación. No hace falta un servidor aparte. `npm run storage:check` es la prueba que sí contacta al almacenamiento configurado; no reemplaza a los tests simulados.
+`npm test` usa `node --test` sobre `tests/*.test.mjs`. No hace falta un servidor aparte. Algunas de esas pruebas:
 
-GitHub Actions corre el mismo conjunto en cada push y en los pull requests hacia `master`.
+| Archivo | Qué cubre |
+| --- | --- |
+| `navegacion.test.mjs` | Rutas, alias y páginas |
+| `mapa-trabajos.test.mjs` | Mapa y agrupación por zona |
+| `asistente-sitio.test.mjs` | Enervolti |
+| `validacion-pedido.test.mjs` | Formulario de presupuesto |
+| `cloudflare-router.test.mjs` | Prefijo `/electricidad` y el 404 |
+
+`npm run storage:check` es la prueba que sí contacta a Google Drive; no reemplaza a los tests simulados. GitHub Actions corre el conjunto en cada push y en los pull requests hacia `master`.
 
 </details>
 
-### 3.1) Sitio publicado (Vercel) [🔝](#índice-)
+### 3.1) Aplicación publicada (Vercel) [🔝](#índice-)
 
 <details>
   <summary>Ver detalle</summary>
 
 <br>
 
-Página pública: **[https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/)**
+Aplicación publicada: **[https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/)**
 
 | Pieza | Rol |
 | --- | --- |
 | Vercel | Build (`npm run build`), funciones `/api` y cron de limpieza |
 | `electricidad.enervoltnova.com` | Origen del Worker. No se elimina ni se redirige desde el panel de dominios |
-| Cloudflare Worker | Publica el sitio en `enervoltnova.com/electricidad/` y responde 404 fuera de ese prefijo |
+| Cloudflare Worker | Publica la aplicación en `enervoltnova.com/electricidad/` y responde 404 fuera de ese prefijo |
 
 El Worker está en `cloudflare/electricidad-router.js`. Quita `/electricidad` antes de consultar Vercel y agrega la marca `x-enervolt-proxy: electricidad`. `vercel.json` redirige con 308 las visitas directas al subdominio que no traen esa marca, para que terminen en el dominio público.
 
@@ -455,13 +422,13 @@ Orden de publicación cuando cambia el 404 o el enrutado: primero el Worker (`np
 
 <br>
 
-1. Fork del repositorio de la aplicación, o de este si el cambio es solo de documentación.
+1. Fork del repositorio.
 2. Creá una rama (`git checkout -b feature/mi-mejora`).
 3. Commit (`git commit -m 'feat: descripción corta'`).
 4. Push (`git push origin feature/mi-mejora`).
 5. Abrí un Pull Request.
 
-No subas `.env.local` ni credenciales. Si cambia una variable, documentala en `.env.example` de la aplicación y en ambos README (inglés y este).
+No subas `.env.local` ni credenciales. Si cambia una variable, documentala en `.env.example` y en ambos README: este y [el inglés](./doc/assets/translation/README.en.md).
 
 </details>
 
@@ -476,8 +443,7 @@ Desarrollado por Andrés Weitzel.
 
 **Links:**
 
-* **Sitio:** [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/)
-* **Aplicación:** [github.com/andresWeitzel/Voltix_Electricidad_AW](https://github.com/andresWeitzel/Voltix_Electricidad_AW)
+* **Aplicación publicada:** [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/)
 * **README en inglés:** [doc/assets/translation/README.en.md](./doc/assets/translation/README.en.md)
 * **Perfil de la empresa:** [Enervolt Nova Electricidad en Google](https://www.google.com/maps/place/Enervolt+Nova+Electricidad/data=!4m2!3m1!1s0x0:0xcb27b0a80c78e048)
 

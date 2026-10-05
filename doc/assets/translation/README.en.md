@@ -32,7 +32,7 @@
 
 </div>
 
-Enervolt Nova Electricidad is the site of an electrical service for homes, offices, shops, and apartment buildings in Buenos Aires City and nearby areas, open 24 hours. Visitors find concrete services, real jobs with a photo and a neighborhood, and a map to browse the work by area. When someone arrives with a question, Enervolti —the site's AI chat— answers it right away: services, coverage, hours, visits, and how to request a quote. When they are ready to move ahead, they add a location, describe the problem, and can attach photos or a short video. The request is ready to continue on WhatsApp or email.
+Enervolt Nova Electricidad is the application of an electrical service for homes, offices, shops, and apartment buildings in Buenos Aires City and nearby areas, open 24 hours. Visitors find concrete services, real jobs with a photo and a neighborhood, and a map to browse the work by area. When someone arrives with a question, Enervolti —the application's AI chat— answers it right away: services, coverage, hours, visits, and how to request a quote. When they are ready to move ahead, they add a location, describe the problem, and can attach photos or a short video. The request is ready to continue on WhatsApp or email.
 
 <div align="left">
 <a href="https://enervoltnova.com/electricidad/" target="_blank" rel="noopener noreferrer" title="View live"><img src="../icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
@@ -60,7 +60,7 @@ Enervolt Nova Electricidad is the site of an electrical service for homes, offic
 * [1.2) Structure.](#12-structure-)
 * [1.3) Technologies.](#13-technologies-)
 
-### Section 2) The site and the journey
+### Section 2) The application and the journey
 
 * [2.0) Pages.](#20-pages-)
 * [2.1) Services.](#21-services-)
@@ -71,7 +71,7 @@ Enervolt Nova Electricidad is the site of an electrical service for homes, offic
 ### Section 3) Publishing, tests, and references
 
 * [3.0) Tests.](#30-tests-)
-* [3.1) Published site (Vercel).](#31-published-site-vercel-)
+* [3.1) Published application (Vercel).](#31-published-application-vercel-)
 * [3.2) Contributing.](#32-contributing-)
 * [3.3) References.](#33-references-)
 
@@ -88,20 +88,21 @@ Enervolt Nova Electricidad is the site of an electrical service for homes, offic
 
 <br>
 
-This repository holds the **documentation** for the site. The application lives in [Voltix_Electricidad_AW](https://github.com/andresWeitzel/Voltix_Electricidad_AW): React, Vite, and TypeScript, with Vercel functions for quote requests and a Cloudflare Worker that publishes everything under `/electricidad`.
+**Enervolt Nova Electricidad** is a React, Vite, and TypeScript application. Vercel functions store quote requests, and a Cloudflare Worker publishes it at [https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/).
 
 Why it exists:
 
-* Show the trade through services, photos, and the area of each job, on a site that can be browsed without an account.
+* Show the trade through services, photos, and the area of each job, without asking for an account.
+* Answer in chat with Enervolti before the form is filled in.
 * Receive an inquiry with a neighborhood or locality from the catalog, a description, and, when useful, photos or a short video.
-* Store the request and open WhatsApp or email with the message already prepared. The public page is [https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/).
+* Store the request and open WhatsApp or email with the message already prepared.
 
-What the site delivers:
+What the application delivers:
 
 * **Home**, with services, featured jobs, and the path to request a quote.
 * **Nine services:** circuit breakers and RCDs, panels, outlets, lighting, wiring, new installations, fault finding, doorbells, and shop electrical work.
 * **Job catalog** with photo, area, and detail, plus a map to explore them by neighborhood.
-* **Enervolti**, the site chat. It guides people through services, areas, hours, visits, and quotes, and opens the matching page. Answers come from the published information; it does not invent prices or diagnoses.
+* **Enervolti**, the application chat. It guides people through services, areas, hours, visits, and quotes, and opens the matching page. Answers come from the published information; it does not invent prices or diagnoses.
 * **Quote form** with a location from the catalog (48 Buenos Aires City neighborhoods and Buenos Aires Province localities), validation shared by the web app and the server, and delivery through WhatsApp or email.
 * **Search** across services and jobs, plus a light or dark appearance.
 * **How we work** and **Contact**, with service 24 hours a day, including weekends.
@@ -119,15 +120,6 @@ Public contact details (WhatsApp, phone, and email) are defined in the applicati
 
 <br>
 
-The application runs from the code repository, not from this documentation.
-
-* Clone and enter:
-
-```bash
-git clone https://github.com/andresWeitzel/Voltix_Electricidad_AW.git
-cd Voltix_Electricidad_AW
-```
-
 * Install, prepare the local environment, and start:
 
 ```bash
@@ -136,7 +128,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-The site listens on the port Vite prints. **`.env.local` is the only local configuration file.** It is excluded from Git. `.env.example` is the versioned template, without credentials. Phones and email are changed in `shared/contacto.js`, not in the environment.
+The application listens on the port Vite prints. **`.env.local` is the only local configuration file.** It is excluded from Git. `.env.example` is the versioned template, without credentials. Phones and email are changed in `shared/contacto.js`, not in the environment.
 
 CI uses **Node.js 22**.
 
@@ -153,7 +145,7 @@ CI uses **Node.js 22**.
 | `npm run storage:check` | Real write and read check against the configured storage |
 | `npm run drive:connect` | Connects, locally, the Google Drive owner account |
 
-Drive, Vercel, and the cleanup cron are documented in the application README. Do not commit `.env.local`.
+Do not commit `.env.local`. Drive, Vercel, and the cleanup cron use the variables in that file and in the Vercel project.
 
 </details>
 
@@ -164,53 +156,22 @@ Drive, Vercel, and the cleanup cron are documented in the application README. Do
 
 <br>
 
-Documentation (this repository):
-
 ```text
-Enervolt_Nova_Electricidad_Doc/
-├── doc/
-│   └── assets/
-│       ├── enervolt-background.es.png   # Spanish README header
-│       ├── enervolt-background.en.png   # English README header
-│       ├── icons/                       # Badges, pills, and technology icons
-│       ├── pruebas/                     # Screenshots of the published site
-│       └── translation/
-│           ├── arg-flag.jpg             # Flag: Spanish
-│           ├── eeuu-flag.jpg            # Flag: English
-│           └── README.en.md             # English documentation
-└── README.md                            # Spanish documentation
-```
-
-Application:
-
-```text
-Voltix_Electricidad_AW/
-├── api/                                 # Vercel HTTP functions
-│   ├── pedido.js                        # Stores the request
-│   ├── pedido-archivo.js                # Uploads each attachment
-│   ├── solicitud.js                     # Public order lookup
-│   ├── archivo.js
-│   ├── estado.js                        # Configuration diagnostic
-│   └── limpieza-pedidos.js              # Daily sweep
+enervolt-nova-electricidad/
+├── api/                                 # Order, attachments, lookup, status, and cleanup
 ├── cloudflare/
 │   └── electricidad-router.js           # /electricidad prefix and root 404
-├── public/
-│   ├── brand/                           # Logo and social cover
-│   ├── privacidad.html
-│   └── condiciones.html
-├── server/                              # Drive, storage checks, cleanup
-├── shared/                              # Contact, areas, retention, files, validation
+├── public/                              # Brand, privacy, and terms
+├── server/                              # Google Drive, storage, and cleanup
+├── shared/                              # Contact, areas, retention, and validation
 ├── src/
 │   ├── components/
-│   ├── data/                            # Services, jobs, SEO, site copy
-│   ├── hooks/
-│   ├── lib/
-│   ├── modules/asistente/
+│   ├── data/                            # Services, jobs, SEO, and copy
+│   ├── modules/asistente/               # Enervolti
 │   ├── pages/                           # Home, services, jobs, map, quote
 │   └── App.tsx                          # React Router routes
 ├── tests/
 ├── vercel.json                          # Rewrites, redirects, and cron
-├── vite.config.ts
 └── package.json
 ```
 
@@ -226,7 +187,7 @@ Voltix_Electricidad_AW/
 | **Technology** | **Version** | **Purpose** |
 | --- | --- | --- |
 | [React](https://react.dev/) | **19.2** | **Interface** |
-| [React Router](https://reactrouter.com/) | **7.18** | **Site routes** |
+| [React Router](https://reactrouter.com/) | **7.18** | **Application routes** |
 | [TypeScript](https://www.typescriptlang.org/) | **6.0** | **Application types** |
 | [Vite](https://vite.dev/) | **8.3** | **Development and build** |
 | [Node.js](https://nodejs.org/) | **22** | **Tests, scripts, and functions** |
@@ -250,7 +211,7 @@ Voltix_Electricidad_AW/
 
 <br>
 
-## Section 2) The site and the journey
+## Section 2) The application and the journey
 
 ### 2.0) Pages [🔝](#index-)
 
@@ -272,9 +233,9 @@ Locally, routes start at the root. On the public domain they use the `/electrici
 | Quote | `/presupuesto` | https://enervoltnova.com/electricidad/presupuesto |
 | How we work | `/como-trabajamos` | https://enervoltnova.com/electricidad/como-trabajamos |
 | Contact | `/contacto` | https://enervoltnova.com/electricidad/contacto |
-| Search | `/buscar` | internal site use |
+| Search | `/buscar` | search inside the application |
 
-`/proceso` redirects to `/como-trabajamos`. `/home` returns to the home page. An unknown route inside Electricidad shows the site's own not-found page. Outside `/electricidad`, on `enervoltnova.com`, the Worker returns 404 without calling the origin.
+`/proceso` redirects to `/como-trabajamos`. `/home` returns to the home page. An unknown route inside Electricidad shows the application's own not-found page. Outside `/electricidad`, on `enervoltnova.com`, the Worker returns 404 without calling the origin.
 
 </details>
 
@@ -336,7 +297,7 @@ Two ways out, after the request is stored:
 
 The page does not send the message itself. The person confirms it in WhatsApp or in their mail app.
 
-Public contact on the site:
+Public contact:
 
 | Detail | Use |
 | --- | --- |
@@ -357,7 +318,7 @@ Public contact on the site:
 
 <br>
 
-`POST /api/pedido-archivo` uploads each file and `POST /api/pedido` stores the request. **Google Drive is the remote storage.** The site stays browsable if those functions fail; the form keeps what was entered and offers a retry or a text-only send.
+`POST /api/pedido-archivo` uploads each file and `POST /api/pedido` stores the request. **Google Drive is the remote storage.** The application stays usable if those functions fail; the form keeps what was entered and offers a retry or a text-only send.
 
 Originals and the order JSON expire **fifteen days** after upload. The public link (`/p/<solicitud>`) shows the deadline. An expired lookup can return `410` while the file still exists, and `404` after the sweep. The daily cron is declared in `vercel.json` (`GET /api/limpieza-pedidos`, 09:00 UTC).
 
@@ -381,7 +342,7 @@ Legal pages:
 
 <br>
 
-#### 3.0.1) Walkthrough of the published site
+#### 3.0.1) Published walkthrough
 
 Screenshots of [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/). The header of this README is the desktop home. The rest of the walkthrough is here: navigation, how we work, jobs, the map, Enervolti, and the quote form.
 
@@ -389,7 +350,7 @@ Screenshots of [enervoltnova.com/electricidad](https://enervoltnova.com/electric
 
 | Navigation | How we work |
 | --- | --- |
-| <img src="../pruebas/02-navegacion.png" alt="Site menu" width="260" /> | <img src="../pruebas/03-como-trabajamos.png" alt="How we work" width="260" /> |
+| <img src="../pruebas/02-navegacion.png" alt="Application menu" width="260" /> | <img src="../pruebas/03-como-trabajamos.png" alt="How we work" width="260" /> |
 
 | Jobs | Filters |
 | --- | --- |
@@ -413,34 +374,40 @@ Screenshots of [enervoltnova.com/electricidad](https://enervoltnova.com/electric
 
 #### 3.0.2) Automated tests
 
-In the application repository:
-
 ```bash
 npm test
 npm run lint
 npm run build
 ```
 
-`npm test` runs `node --test` over `tests/*.test.mjs`: navigation, map, orders, simulated storage, Drive permissions, the Cloudflare Worker, and the validation contract. No extra server is required. `npm run storage:check` is the check that does contact the configured storage; it does not replace the simulated tests.
+`npm test` runs `node --test` over `tests/*.test.mjs`. No extra server is required. A few of those tests:
 
-GitHub Actions runs the same suite on every push and on pull requests to `master`.
+| File | What it covers |
+| --- | --- |
+| `navegacion.test.mjs` | Routes, aliases, and pages |
+| `mapa-trabajos.test.mjs` | Map and area grouping |
+| `asistente-sitio.test.mjs` | Enervolti |
+| `validacion-pedido.test.mjs` | Quote form |
+| `cloudflare-router.test.mjs` | `/electricidad` prefix and the 404 |
+
+`npm run storage:check` is the check that does contact Google Drive; it does not replace the simulated tests. GitHub Actions runs the suite on every push and on pull requests to `master`.
 
 </details>
 
-### 3.1) Published site (Vercel) [🔝](#index-)
+### 3.1) Published application (Vercel) [🔝](#index-)
 
 <details>
   <summary>View details</summary>
 
 <br>
 
-Public page: **[https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/)**
+Published application: **[https://enervoltnova.com/electricidad/](https://enervoltnova.com/electricidad/)**
 
 | Piece | Role |
 | --- | --- |
 | Vercel | Build (`npm run build`), `/api` functions, and the cleanup cron |
 | `electricidad.enervoltnova.com` | Worker origin. It is not removed or redirected from the domains panel |
-| Cloudflare Worker | Publishes the site at `enervoltnova.com/electricidad/` and returns 404 outside that prefix |
+| Cloudflare Worker | Publishes the application at `enervoltnova.com/electricidad/` and returns 404 outside that prefix |
 
 The Worker is `cloudflare/electricidad-router.js`. It strips `/electricidad` before calling Vercel and adds the mark `x-enervolt-proxy: electricidad`. `vercel.json` 308-redirects direct visits to the subdomain that do not carry that mark, so they end on the public domain.
 
@@ -455,13 +422,13 @@ When the 404 or the routing changes, publish in this order: the Worker first (`n
 
 <br>
 
-1. Fork the application repository, or this one if the change is documentation only.
+1. Fork the repository.
 2. Create a branch (`git checkout -b feature/my-change`).
 3. Commit (`git commit -m 'feat: short description'`).
 4. Push (`git push origin feature/my-change`).
 5. Open a pull request.
 
-Do not commit `.env.local` or credentials. If a variable changes, document it in the application's `.env.example` and in both READMEs (English and Spanish).
+Do not commit `.env.local` or credentials. If a variable changes, document it in `.env.example` and in both READMEs: this one and the [Spanish README](../../README.md).
 
 </details>
 
@@ -476,8 +443,7 @@ Developed by Andrés Weitzel.
 
 **Links:**
 
-* **Site:** [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/)
-* **Application:** [github.com/andresWeitzel/Voltix_Electricidad_AW](https://github.com/andresWeitzel/Voltix_Electricidad_AW)
+* **Published application:** [enervoltnova.com/electricidad](https://enervoltnova.com/electricidad/)
 * **Spanish README:** [README.md](../../README.md)
 * **Business profile:** [Enervolt Nova Electricidad on Google](https://www.google.com/maps/place/Enervolt+Nova+Electricidad/data=!4m2!3m1!1s0x0:0xcb27b0a80c78e048)
 
